@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="989.0" style="-fx-background-color: #ecf0f1; " xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Playlist.ActualizarController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-5.0" prefHeight="96.0" prefWidth="992.0" style="-fx-background-color: #cc0000;">
+         <children>
+            <Text fill="WHITE" layoutX="260.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACTUALIZAR PLAYLIST" textAlignment="CENTER" wrappingWidth="521.1367492675781">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="898.0" layoutY="17.0">
+               <image>
+                  <Image url="@../../../resources/images/queue.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#2c3e50" layoutX="74.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNamePlaylist" layoutX="70.0" layoutY="192.0" prefHeight="35.0" prefWidth="847.0" />
+      <Text fill="#2c3e50" layoutX="76.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tema" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtTemaPlaylist" layoutX="72.0" layoutY="262.0" prefHeight="35.0" prefWidth="847.0" />
+      <Label fx:id="playlistAlertaMensaje" layoutX="70.0" layoutY="675.0" prefHeight="17.0" prefWidth="847.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="botorPlaylistRegresar" layoutX="71.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="37.0" prefWidth="145.0" style="-fx-background-color: #cc0000;" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botorPlaylistAgregar" layoutX="247.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#validationFormPlaylist" prefHeight="37.0" prefWidth="145.0" style="-fx-background-color: #cc0000;" text="Actualizar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listAllVideos" layoutX="73.0" layoutY="360.0" onMouseClicked="#addTo" prefHeight="289.0" prefWidth="390.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <ListView fx:id="listPlaylist" layoutX="526.0" layoutY="360.0" onMouseClicked="#addTo" prefHeight="289.0" prefWidth="390.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <Text fill="#2c3e50" layoutX="76.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Videos  registrados" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#2c3e50" layoutX="526.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Videos del playlist" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

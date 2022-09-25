@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="192.0" prefWidth="194.0" stylesheets="@../../../resources/css/custom.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Templates.ItemPlaylistListadoController">
+   <children>
+      <ImageView fx:id="preview" onMouseClicked="#play" fitHeight="80.0" fitWidth="77.0" layoutX="59.0"  layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/playlist.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelNombre" layoutX="12.0" layoutY="106.0" prefHeight="24.0" prefWidth="169.0" text="Nombre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTema" layoutX="12.0" layoutY="131.0" prefHeight="24.0" prefWidth="169.0" text="Tema:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDuracion" layoutX="12.0" layoutY="157.0" prefHeight="24.0" prefWidth="169.0" text="Cantidad de Videos:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnEdit" onMouseClicked="#editPlaylist" fitHeight="90.0" fitWidth="34.0" layoutX="13.0" layoutY="11.0"  pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnDelete" onMouseClicked="#deletePlaylist" fitHeight="90.0" fitWidth="34.0" layoutX="149.0" layoutY="9.0"  pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/delete.png" />
+         </image>
+      </ImageView>
+   </children>
+   <styleClass>
+      <String fx:value="item" />
+      <String fx:value="item-sombra" />
+   </styleClass>
+</AnchorPane>

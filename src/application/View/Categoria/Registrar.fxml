@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root_categoria" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Categoria.RegistrarController">
+   <top>
+      <AnchorPane prefHeight="93.0" prefWidth="592.0" style="-fx-background-color: #cc0000;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="313.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" wrappingWidth="397.787109375">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="688.0" fitWidth="993.0" opacity="0.11">
+               <image>
+                  <Image url="@../../../resources/images/catalogo.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="54.0" prefHeight="35.0" prefWidth="931.0" text="Nombre">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="172.0" prefHeight="35.0" prefWidth="931.0" text="Descripcion">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCategoriaNombre" layoutX="28.0" layoutY="91.0" prefHeight="35.0" prefWidth="933.0" />
+            <TextArea fx:id="txtCategoriaDescripcion" layoutX="28.0" layoutY="211.0" prefHeight="197.0" prefWidth="934.0" />
+            <Label fx:id="mensajeDeAlertaCategoria" layoutX="28.0" layoutY="439.0" prefHeight="23.0" prefWidth="563.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="botonCategoriaRegresar" layoutX="28.0" layoutY="524.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #cc0000;" text="Regresar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="botonCategoriaAgregar" layoutX="248.0" layoutY="524.0" mnemonicParsing="false" onAction="#validationFormCategoria" prefHeight="39.0" prefWidth="198.0" style="-fx-background-color: #cc0000;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

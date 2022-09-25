@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="989.0" style="-fx-background-color: #ecf0f1; " xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Video.ListarController">
+    <children>
+        <Pane prefHeight="780.0" prefWidth="10.0" style="-fx-background-color: #cc0000;" />
+        <Pane layoutX="10.0" layoutY="197.0" prefHeight="580.0" prefWidth="10.0" style="-fx-background-color: #780716;" />
+        <Pane layoutX="979.0" layoutY="-3.0" prefHeight="780.0" prefWidth="10.0" style="-fx-background-color: #cc0000;" />
+        <Pane layoutX="969.0" layoutY="201.0" prefHeight="575.0" prefWidth="10.0" style="-fx-background-color: #780716;" />
+        <Pane layoutX="-2.0" layoutY="767.0" prefHeight="13.0" prefWidth="991.0" style="-fx-background-color: #780716;" />
+      <Label layoutX="345.0" layoutY="22.0" prefHeight="49.0" prefWidth="128.0" text="Videos" textFill="#878787">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="22.0" text="registrados" textFill="#878787">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="36.0" layoutY="92.0" prefHeight="58.0" prefWidth="504.0" stylesheets="@../../../resources/css/custom.css">
+         <children>
+            <TextField fx:id="txtSearch" prefHeight="40.0" prefWidth="335.0" promptText="Buscar por titulo" styleClass="transparente" stylesheets="@../../../resources/css/custom.css">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onMouseClicked="#search" prefHeight="40.0" prefWidth="100.0" styleClass="btn-search" stylesheets="@../../../resources/css/custom.css" text="Buscar" textFill="WHITE" />
+         </children>
+         <styleClass>
+            <String fx:value="search-box" />
+            <String fx:value="item-sombra" />
+         </styleClass>
+      </HBox>
+      <ComboBox fx:id="sltFilter" layoutX="556.0" layoutY="99.0" onAction="#filterList" prefHeight="45.0" prefWidth="278.0" promptText="Filtrar por categorias" styleClass="slt-categorias" stylesheets="@../../../resources/css/custom.css" />
+      <ScrollPane fx:id="scroll" layoutX="36.0" layoutY="197.0" prefHeight="552.0" prefWidth="913.0" styleClass="transparente" stylesheets="@../../../resources/css/custom.css">
+         <content>
+            <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="849.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#cleanFilters" prefHeight="40.0" prefWidth="100.0" styleClass="btn-search" stylesheets="@../../../resources/css/custom.css" text="Limpiar filtros" textFill="WHITE" />
+      <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="42.0" layoutY="39.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+    </children>
+</AnchorPane>

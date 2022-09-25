@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Users.LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="788.0" fitWidth="1040.0" layoutX="-480.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/images/preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="780.0" prefWidth="463.0" style="-fx-background-color: #ecece7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="129.0" fitWidth="127.0" layoutX="163.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/images/login-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="272.0" prefHeight="28.0" prefWidth="155.0" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="360.0" prefWidth="79.0" text="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="67.0" layoutY="308.0" prefHeight="35.0" prefWidth="319.0" />
+            <Button fx:id="btnLogin" layoutX="66.0" layoutY="510.0" mnemonicParsing="false" onAction="#validateData" prefHeight="55.0" prefWidth="319.0" style="-fx-background-color: #cc0000;" text="Iniciar Sesion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSignin" layoutX="225.0" layoutY="610.0" mnemonicParsing="false" onAction="#signin" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: #cc0000;" text="Registrarse" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="67.0" layoutY="613.0" prefHeight="19.0" prefWidth="142.0" text="No tienes cuenta?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginMessage" layoutX="66.0" layoutY="445.0" prefHeight="21.0" prefWidth="319.0" text="">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="393.0" prefHeight="35.0" prefWidth="319.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

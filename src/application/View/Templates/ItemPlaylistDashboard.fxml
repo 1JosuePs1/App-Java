@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  prefHeight="192.0" prefWidth="194.0" stylesheets="@../../../resources/css/custom.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Templates.ItemPlaylistDashboardController">
+   <children>
+      <ImageView fx:id="preview" onMouseClicked="#play" fitHeight="113.0" fitWidth="92.0" layoutX="52.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/playlist.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelNombre" layoutX="13.0" layoutY="138.0" prefHeight="24.0" prefWidth="169.0" text="Nombre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="item" />
+      <String fx:value="item-sombra" />
+   </styleClass>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.Video.ActualizarController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" />
+      <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="45.0" layoutY="33.0" prefHeight="17.0" prefWidth="601.0" text="Actualizar Video">
+         <font>
+            <Font name="Calibri Bold" size="29.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="45.0" layoutY="135.0" prefHeight="5.0" text="Título">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="197.0" prefHeight="28.0" prefWidth="91.0" text="Descripción">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="401.0" text="Categoría">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnActualizar" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="719.0" mnemonicParsing="false" onAction="#validationForm" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #cc0000;" text="Actualizar" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="sltCategoria" layoutX="222.0" layoutY="395.0" prefHeight="35.0" prefWidth="600.0" />
+      <TextField fx:id="txtTitulo" layoutX="222.0" layoutY="130.0" prefHeight="35.0" prefWidth="600.0" />
+      <Button fx:id="btnRegresar" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="720.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #cc0000;" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="txtVideoAgregado" layoutX="45.0" layoutY="543.0" prefWidth="600.0" textFill="#cc0000">
+         <padding>
+            <Insets left="40.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDescripcion" layoutX="222.0" layoutY="201.0" prefHeight="156.0" prefWidth="600.0" />
+      <Label fx:id="message" layoutX="55.0" layoutY="531.0" prefHeight="5.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
